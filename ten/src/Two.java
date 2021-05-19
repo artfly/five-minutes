@@ -5,6 +5,8 @@ public class Two {
         Thread t2 = new Thread(printHello());
         t1.start();
         t2.start();
+        t1.join();
+        t2.join();
         System.out.println("Bye!");
     }
 
